@@ -85,19 +85,21 @@ function study(programmer: Ninja){
 
 
 //-----------------------------------------------------------------------------------------------------------
-var increment = x => x + 1;
+var increment = (x:number) => x + 1;
 // This works great:
 console.log(increment(3));
-var square = x => {x * x};
+var square = (x:number) => {x * x};
 // This is not showing me what I want:
 console.log(square(4));
 // This is not working:
-//! var multiply = x,y => x * y;
+var multiply = (x:number,y:number) => x * y;
 // Nor is this working:
-//! var math = (x, y) => let sum = x + y;
-//! let product = x * y;
-//! let difference = Math.abs(x-y);
-//! return [sum, product, difference];
+var math = (x:number, y:number) => {
+    let sum = x + y;
+    let product = x * y;
+    let difference = Math.abs(x-y);
+    return [sum, product, difference];
+}
 
 //? Those simbols has a type of any so they can not be summed or rested
 
